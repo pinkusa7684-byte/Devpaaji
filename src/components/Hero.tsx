@@ -4,13 +4,9 @@ import {
   Sparkles, 
   TrendingUp, 
   Shield, 
-  PieChart, 
-  Briefcase, 
   CheckCircle2, 
-  BarChart3, 
   Users, 
   FileCheck2,
-  Lock,
   Compass
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/content';
@@ -82,7 +78,7 @@ export default function Hero({ onOpenConsultation, onExploreServices }: HeroProp
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <button
                 onClick={onOpenConsultation}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#0B1528] text-white font-semibold text-sm hover:bg-blue-950 transition-all shadow-md shadow-blue-950/15 active:scale-[0.98] group"
@@ -99,103 +95,89 @@ export default function Hero({ onOpenConsultation, onExploreServices }: HeroProp
                 <Compass className="w-4 h-4 text-blue-600" />
               </button>
             </div>
+
+            {/* Trust Proof */}
+            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-2.5 text-xs text-slate-600">
+              <div className="flex items-center text-amber-400 tracking-tight text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span className="font-semibold text-slate-800">AMFI ARN-358845</span>
+              <span className="text-slate-300">•</span>
+              <span className="text-slate-600">Bilaspur, CG</span>
+              <span className="text-slate-300">•</span>
+              <span className="text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                Zero Fees for Initial Orientation
+              </span>
+            </div>
           </div>
 
-          {/* Right Column: Premium Business & Financial Dashboard Visual with Floating Cards */}
+          {/* Right Column: Premium Business & Financial Dashboard Visual */}
           <div className="lg:col-span-6 xl:col-span-5 relative">
-            
-            {/* Subtle Floating Label Badge 1: Business Growth */}
-            <div className="absolute -top-4 -left-4 sm:-left-6 z-20 bg-white/95 backdrop-blur-md rounded-xl p-2.5 sm:p-3 shadow-lg border border-slate-200/80 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center">
-                <TrendingUp className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold block leading-tight">Focus</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Business Growth</span>
-              </div>
-            </div>
-
-            {/* Subtle Floating Label Badge 2: Investment */}
-            <div className="absolute -top-6 right-2 sm:right-6 z-20 bg-white/95 backdrop-blur-md rounded-xl p-2.5 sm:p-3 shadow-lg border border-slate-200/80 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center">
-                <PieChart className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold block leading-tight">Wealth</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Investment & SIP</span>
-              </div>
-            </div>
-
-            {/* Subtle Floating Label Badge 3: Insurance */}
-            <div className="absolute -bottom-4 -left-2 sm:-left-4 z-20 bg-white/95 backdrop-blur-md rounded-xl p-2.5 sm:p-3 shadow-lg border border-slate-200/80 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center">
-                <Shield className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold block leading-tight">Safety</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Insurance Cover</span>
-              </div>
-            </div>
-
-            {/* Subtle Floating Label Badge 4: Digital Growth */}
-            <div className="absolute -bottom-5 -right-2 sm:-right-4 z-20 bg-white/95 backdrop-blur-md rounded-xl p-2.5 sm:p-3 shadow-lg border border-slate-200/80 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center">
-                <BarChart3 className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold block leading-tight">Reach</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Digital Growth</span>
-              </div>
-            </div>
+            {/* Ambient subtle decorative glow behind console */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-amber-500/10 rounded-3xl blur-xl opacity-70 pointer-events-none"></div>
 
             {/* Main Interactive Dashboard Card */}
-            <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/80 border border-slate-200 overflow-hidden relative z-10">
+            <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200/90 overflow-hidden relative z-10">
               
               {/* Dashboard Header Bar */}
-              <div className="bg-[#0B1528] px-5 py-3.5 text-white flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                  <span className="text-xs font-semibold text-slate-300 ml-2">Carrier Craft Unified Console</span>
+              <div className="bg-[#0B1528] px-5 py-3.5 text-white flex items-center justify-between border-b border-slate-800">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80"></span>
+                  </div>
+                  <span className="text-xs font-semibold text-slate-200 ml-1.5 hidden sm:inline">
+                    Carrier Craft Unified Console
+                  </span>
+                  <span className="text-xs font-semibold text-slate-200 ml-1.5 sm:hidden">
+                    Carrier Craft
+                  </span>
                 </div>
-                <span className="text-[10px] bg-slate-800 text-amber-400 font-mono px-2 py-0.5 rounded border border-slate-700">
-                  AMFI ARN-358845
-                </span>
+
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 text-[10px] bg-emerald-950/80 text-emerald-400 border border-emerald-700/60 px-2 py-0.5 rounded-full font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Live Desk Active
+                  </span>
+                  <span className="text-[10px] bg-slate-800 text-amber-400 font-mono px-2 py-0.5 rounded border border-slate-700">
+                    ARN-358845
+                  </span>
+                </div>
               </div>
 
-              {/* Console Mode Selector */}
-              <div className="bg-slate-50 border-b border-slate-200 px-4 py-2 flex items-center justify-between text-xs font-medium text-slate-600">
-                <div className="flex gap-1">
+              {/* Console Mode Selector Tabs */}
+              <div className="bg-slate-50/90 border-b border-slate-200 px-3 py-2 flex items-center justify-between text-xs font-medium">
+                <div className="flex gap-1.5 w-full">
                   <button
                     onClick={() => setActiveTab('overview')}
-                    className={`px-3 py-1.5 rounded-lg transition-all ${
+                    className={`flex-1 py-1.5 px-2.5 rounded-lg text-center transition-all ${
                       activeTab === 'overview'
-                        ? 'bg-white text-blue-700 font-semibold shadow-sm border border-slate-200'
-                        : 'hover:text-slate-900'
+                        ? 'bg-white text-blue-700 font-bold shadow-sm border border-slate-200/80'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
                     }`}
                   >
                     Integrated Plan
                   </button>
                   <button
                     onClick={() => setActiveTab('sip')}
-                    className={`px-3 py-1.5 rounded-lg transition-all ${
+                    className={`flex-1 py-1.5 px-2.5 rounded-lg text-center transition-all ${
                       activeTab === 'sip'
-                        ? 'bg-white text-blue-700 font-semibold shadow-sm border border-slate-200'
-                        : 'hover:text-slate-900'
+                        ? 'bg-white text-blue-700 font-bold shadow-sm border border-slate-200/80'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
                     }`}
                   >
                     SIP & Wealth
                   </button>
                   <button
                     onClick={() => setActiveTab('business')}
-                    className={`px-3 py-1.5 rounded-lg transition-all ${
+                    className={`flex-1 py-1.5 px-2.5 rounded-lg text-center transition-all ${
                       activeTab === 'business'
-                        ? 'bg-white text-blue-700 font-semibold shadow-sm border border-slate-200'
-                        : 'hover:text-slate-900'
+                        ? 'bg-white text-blue-700 font-bold shadow-sm border border-slate-200/80'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
                     }`}
                   >
-                    Business Compliance
+                    Tax & Business
                   </button>
                 </div>
               </div>
@@ -207,50 +189,52 @@ export default function Hero({ onOpenConsultation, onExploreServices }: HeroProp
                   <div className="space-y-4">
                     {/* Top Metric Cards */}
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-100">
+                      <div className="p-3.5 rounded-xl bg-gradient-to-br from-blue-50/90 to-blue-50/40 border border-blue-100/90">
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-[11px] font-semibold text-blue-900">Disciplined Wealth</span>
                           <TrendingUp className="w-3.5 h-3.5 text-blue-600" />
                         </div>
                         <div className="text-base sm:text-lg font-bold text-slate-900">Monthly SIP</div>
-                        <div className="text-[11px] text-slate-500 mt-0.5">Compounding horizon</div>
+                        <div className="text-[11px] text-slate-500 mt-0.5">Goal-mapped compounding</div>
                       </div>
 
-                      <div className="p-3.5 rounded-xl bg-amber-50/70 border border-amber-100">
+                      <div className="p-3.5 rounded-xl bg-gradient-to-br from-amber-50/90 to-amber-50/40 border border-amber-100/90">
                         <div className="flex items-center justify-between mb-1">
-                          <span className="text-[11px] font-semibold text-amber-900">Family Safety</span>
+                          <span className="text-[11px] font-semibold text-amber-900">Family Protection</span>
                           <Shield className="w-3.5 h-3.5 text-amber-600" />
                         </div>
-                        <div className="text-base sm:text-lg font-bold text-slate-900">Protection Shield</div>
-                        <div className="text-[11px] text-slate-500 mt-0.5">Life & Health Cover</div>
+                        <div className="text-base sm:text-lg font-bold text-slate-900">Insurance Shield</div>
+                        <div className="text-[11px] text-slate-500 mt-0.5">Life & Health Security</div>
                       </div>
                     </div>
 
                     {/* Integrated Growth SVG Chart */}
-                    <div className="p-4 rounded-xl bg-slate-900 text-white space-y-2">
+                    <div className="p-4 rounded-xl bg-slate-900 text-white space-y-2 border border-slate-800 shadow-inner">
                       <div className="flex items-center justify-between text-xs">
-                        <span className="font-semibold text-slate-300">Goal Progression Trajectory</span>
-                        <span className="text-amber-400 font-mono text-[11px]">Systematic Strategy</span>
+                        <span className="font-semibold text-slate-200">Goal Progression Trajectory</span>
+                        <span className="text-amber-400 font-mono text-[11px] font-medium bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/20">
+                          Disciplined Compounding
+                        </span>
                       </div>
                       
                       {/* SVG Curve */}
                       <div className="h-28 w-full relative pt-2">
                         <svg viewBox="0 0 300 90" className="w-full h-full overflow-visible">
                           <defs>
-                            <linearGradient id="curveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                              <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.4" />
+                            <linearGradient id="heroCurveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.45" />
                               <stop offset="100%" stopColor="#3B82F6" stopOpacity="0.0" />
                             </linearGradient>
                           </defs>
                           {/* Grid lines */}
-                          <line x1="0" y1="20" x2="300" y2="20" stroke="#334155" strokeDasharray="3 3" />
-                          <line x1="0" y1="50" x2="300" y2="50" stroke="#334155" strokeDasharray="3 3" />
-                          <line x1="0" y1="80" x2="300" y2="80" stroke="#334155" strokeDasharray="3 3" />
+                          <line x1="0" y1="20" x2="300" y2="20" stroke="#334155" strokeDasharray="3 3" opacity="0.6" />
+                          <line x1="0" y1="50" x2="300" y2="50" stroke="#334155" strokeDasharray="3 3" opacity="0.6" />
+                          <line x1="0" y1="80" x2="300" y2="80" stroke="#334155" strokeDasharray="3 3" opacity="0.6" />
                           
                           {/* Fill */}
                           <path 
                             d="M 10 75 Q 80 70, 150 45 T 290 12 L 290 85 L 10 85 Z" 
-                            fill="url(#curveGradient)" 
+                            fill="url(#heroCurveGradient)" 
                           />
                           {/* Smooth Line */}
                           <path 
@@ -267,22 +251,22 @@ export default function Hero({ onOpenConsultation, onExploreServices }: HeroProp
                         </svg>
                         
                         <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
-                          <span>Month 1: Foundation</span>
+                          <span>Month 1: Setup</span>
                           <span>Year 3: Expansion</span>
-                          <span className="text-amber-300">Goal Realization</span>
+                          <span className="text-amber-300 font-semibold">Wealth Realization</span>
                         </div>
                       </div>
                     </div>
 
-                    {/* Integrated 4-pillar status preview */}
+                    {/* Integrated status pills */}
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
                         <FileCheck2 className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" />
-                        <span className="text-slate-700 truncate">GST & Accounting: Ready</span>
+                        <span className="text-slate-700 truncate font-medium">GST & Books: Ready</span>
                       </div>
                       <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
                         <Users className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
-                        <span className="text-slate-700 truncate">Digital Reach: Active</span>
+                        <span className="text-slate-700 truncate font-medium">Digital Growth: Active</span>
                       </div>
                     </div>
                   </div>
