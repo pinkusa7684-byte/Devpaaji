@@ -1,0 +1,6 @@
+{
+  "name": "Carrier Craft Finserv",
+  "description": "Multi-service financial and business-support consultancy in Bilaspur, Chhattisgarh offering business support, digital marketing, accounting, tax, investment, and insurance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
